@@ -4,7 +4,11 @@ from supabase import create_client, Client
 import uuid
 import os
 
-app = FastAPI(title="Movies REST API")
+app = FastAPI(
+    title="Movies REST API",
+docs_url="/docs",
+redoc_url="/redoc"
+)
 
 app.add_middleware(
     CORSMiddleware,
